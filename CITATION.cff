@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use CycAsm, please cite it as below."
+title: "CycAsm: CycloneSEQ long-read + DNBSEQ short-read hybrid genome assembly pipeline"
+version: 1.0.0
+date-released: 2026-07-27
+authors:
+  - name: "CycloneSEQ 华大序风"
+license: MIT
+repository-code: "https://github.com/Huangyechao/CycAsm"
+keywords:
+  - genome-assembly
+  - long-read
+  - CycloneSEQ
+  - polishing
+abstract: >-
+  CycAsm 是基于 CycloneSEQ 长读长数据与 DNBSEQ 短读长数据，用于完成高精度基因组组装的软件。
+  它将长读长的连续性与短读长的碱基准确度相结合：首先利用 CycloneSEQ 长读长通过 hifiasm
+  搭建高连续性的基因组骨架，再将 DNBSEQ 短读长与 CycloneSEQ 长读长分别比对回骨架，
+  最后通过单倍型感知的长短读长协同抛光（Thpolish）校正局部碱基错误，
+  在保持组装连续性的同时显著提升碱基准确性并减少分型错误，
+  产出高质量的个体基因组组装结果（FASTA + VCF）。

@@ -1,0 +1,40 @@
+name: cycasm
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+  - defaults
+dependencies:
+  - python>=3.10
+  - rust
+  - hifiasm>=0.21.0
+  - bwa-mem2
+  - minimap2
+  - samtools
+  # Thpolish Python dependencies
+  - pysam
+  - numpy
+  - joblib
+  - safetensors
+  - zstandard
+  - scikit-learn
+  - lightgbm
+  - pandas
+  - pytorch=2.10.0
+  - torchvision
+  - torchaudio
+  - perl
+  - perl-ipc-cmd
+  - c-compiler
+  - clang
+  - pip
+  - pip:
+      - xxhash
+      - pyfastx
+# Notes:
+#   - GPU users should install the CUDA-matched PyTorch build instead, e.g.:
+#       pip install torch==2.10.0+cu126 torchvision==0.25.0+cu126 torchaudio==2.10.0+cu126 \
+#           --index-url https://download.pytorch.org/whl/cu126 --extra-index-url https://pypi.org/simple
+#   - fxTools is not on bioconda; install from https://github.com/moold/fxTools
+#   - After creating the env, build Thpolish:
+#       cd Thpolish && LIBTORCH_USE_PYTORCH=1 cargo build --release

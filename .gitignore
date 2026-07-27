@@ -1,0 +1,48 @@
+# CycAsm pipeline outputs
+*.bam
+*.bai
+*.csi
+*.gfa
+*.bin
+*.depth.npz
+*.fasta
+*.fai
+*.vcf
+*.vcf.gz
+predict/
+*.split*/
+.cycasm_ckpt/
+cycasm.log
+hifiasm.log
+bwa.log
+minimap2.log
+
+# Raw sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# bwa-mem2 index files
+*.0123
+*.amb
+*.ann
+*.bwt.2bit.64
+*.pac
+
+# Thpolish build artifacts
+Thpolish/target/
+**/*.rs.bk
+*.pdb
+
+# Thpolish model files (distributed as GitHub Release assets)
+Thpolish/model/*.pkl
+Thpolish/model/*.pt
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
